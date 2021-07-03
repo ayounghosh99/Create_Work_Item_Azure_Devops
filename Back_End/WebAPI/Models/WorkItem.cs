@@ -1,11 +1,9 @@
 ﻿using System;
 namespace WebAPI.Models
 {
-    public class Department
+    public class WorkItem
     {
-       public int DepartmentId { get; set; }
-
-       public string DepartmentName { get; set; }
+       public string Title { get; set; }
 
        public string Objective { get; set; }
 

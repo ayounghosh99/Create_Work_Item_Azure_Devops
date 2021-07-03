@@ -70,9 +70,25 @@ class BusinessIntelligenceForm extends React.Component {
         const isValid = this.handleValidation();
         if (isValid) {
             console.log("submitted");
-            // let wib = new WorkItemBody();
-            // wib.setValue(this.state.fields["title"]);
-            // this.createWorkItem(wib);            
+            console.log(this.state.fields.title)
+            fetch('http://localhost:5000/api/workitem',{
+            method:'POST',
+            headers:{
+                'Accept':'application/json',
+                'Content-Type':'application/json'
+            },
+            body:JSON.stringify({
+                Title:this.state.fields.title
+            })
+        })
+        .then(response=>{
+            console.log(response)
+            if(response.ok) {
+                return response.json();
+            } else {
+                throw new Error('Something went wrong...');
+            }
+        })      
         }
         else {
             console.log("not submitted");

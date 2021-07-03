@@ -671,11 +671,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ayounghosh/Downloads/WebAPI/WebAPI/WebAPI.csproj",
+      "projectUniqueName": "/Users/ayounghosh/Downloads/Create_Work_Item_Azure_Devops/Back_End/WebAPI/WebAPI.csproj",
       "projectName": "WebAPI",
-      "projectPath": "/Users/ayounghosh/Downloads/WebAPI/WebAPI/WebAPI.csproj",
+      "projectPath": "/Users/ayounghosh/Downloads/Create_Work_Item_Azure_Devops/Back_End/WebAPI/WebAPI.csproj",
       "packagesPath": "/Users/ayounghosh/.nuget/packages/",
-      "outputPath": "/Users/ayounghosh/Downloads/WebAPI/WebAPI/obj/",
+      "outputPath": "/Users/ayounghosh/Downloads/Create_Work_Item_Azure_Devops/Back_End/WebAPI/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
