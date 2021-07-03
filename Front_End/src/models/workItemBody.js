@@ -4,6 +4,6 @@ export class WorkItemBody {
     from = null;
     value = "";
     setValue(val) {
-        value = val;
+        // value = val;
     }
 }

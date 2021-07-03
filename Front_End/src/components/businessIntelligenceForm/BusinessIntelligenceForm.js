@@ -70,23 +70,23 @@ class BusinessIntelligenceForm extends React.Component {
         const isValid = this.handleValidation();
         if (isValid) {
             console.log("submitted");
-            let wib = new WorkItemBody();
-            wib.setValue(this.state.fields["title"]);
-            this.createWorkItem(wib);            
+            // let wib = new WorkItemBody();
+            // wib.setValue(this.state.fields["title"]);
+            // this.createWorkItem(wib);            
         }
         else {
             console.log("not submitted");
         }
     }
 
-    createWorkItem = (formData) => {
-        var httpOptions = {
-          headers: new HttpHeaders({
-            'Content-Type': 'application/json'
-          })
-        };
-        return this.http.post<WorkItemBody>(url, formData, httpOptions);
-      }
+    // createWorkItem = (formData) => {
+    //     var httpOptions = {
+    //       headers: new HttpHeaders({
+    //         'Content-Type': 'application/json'
+    //       })
+    //     };
+    //     return this.http.post<WorkItemBody>(url, formData, httpOptions);
+    //   }
 
     render() {
         return (
@@ -132,12 +132,12 @@ class BusinessIntelligenceForm extends React.Component {
                     onChange={this.handleImpactChange}/>
                 </div>
 
-                <div className = "col-6">
+                {/* <div className = "col-6">
                         <label className = "mb-1">
                             Please add demo field
                         </label>
                         <TextField/>
-                </div>
+                </div> */}
             </div>
         )
     }
