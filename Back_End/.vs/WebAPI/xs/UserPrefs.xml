@@ -1,12 +1,13 @@
 ﻿<Properties StartupConfiguration="{34266FB6-8DC6-40BC-B229-948BE9884F79}|Default">
   <MonoDevelop.Ide.ItemProperties.WebAPI PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../WebAPI/WebAPI/Models/Department.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WebAPI/Controllers/WorkItemController.cs">
     <Files>
-      <File FileName="WebAPI/Controllers/DepartmentController.cs" Line="30" Column="36" />
+      <File FileName="WebAPI/Controllers/DepartmentController.cs" Line="26" Column="6" />
       <File FileName="WebAPI/Startup.cs" Line="22" Column="43" />
       <File FileName="WebAPI/appsettings.json" Line="1" Column="2" />
       <File FileName="WebAPI/Models/WorkItem.cs" Line="6" Column="27" />
-      <File FileName="../../WebAPI/WebAPI/Models/Department.cs" Line="4" Column="18" />
+      <File FileName="../../WebAPI/WebAPI/Models/Department.cs" Line="17" Column="1" />
+      <File FileName="WebAPI/Models/Azure.cs" Line="6" Column="8" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,8 +15,9 @@
           <Node name="WebAPI" expanded="True">
             <Node name="WebAPI" expanded="True">
               <Node name="Controllers" expanded="True" />
-              <Node name="Models" expanded="True" />
-              <Node name="Startup.cs" selected="True" />
+              <Node name="Models" expanded="True">
+                <Node name="WorkItem.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>

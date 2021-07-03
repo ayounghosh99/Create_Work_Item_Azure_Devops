@@ -15,7 +15,7 @@ class BusinessIntelligenceForm extends React.Component {
         this.state = { 
             objectiveText: '',
             impactText: '',
-            date: '',
+            date: new Date(),
             fields: {},
             errors: {}
         }
@@ -45,6 +45,8 @@ class BusinessIntelligenceForm extends React.Component {
     }
 
     handleDateChange = (value) => {
+        console.log(value)
+        console.log(typeof(value))
         this.setState({date: value});
         let fields = this.state.fields;
         fields["date"] = value;
@@ -69,8 +71,6 @@ class BusinessIntelligenceForm extends React.Component {
     handleSubmit = () => {
         const isValid = this.handleValidation();
         if (isValid) {
-            console.log("submitted");
-            console.log(this.state.fields.title)
             fetch('http://localhost:5000/api/workitem',{
             method:'POST',
             headers:{
@@ -78,7 +78,10 @@ class BusinessIntelligenceForm extends React.Component {
                 'Content-Type':'application/json'
             },
             body:JSON.stringify({
-                Title:this.state.fields.title
+                Title: this.state.fields.title,
+                Objective: this.state.fields.objective,
+                NeedByDate: this.state.fields.date,
+                Impact: this.state.fields.impact
             })
         })
         .then(response=>{
@@ -94,15 +97,6 @@ class BusinessIntelligenceForm extends React.Component {
             console.log("not submitted");
         }
     }
-
-    // createWorkItem = (formData) => {
-    //     var httpOptions = {
-    //       headers: new HttpHeaders({
-    //         'Content-Type': 'application/json'
-    //       })
-    //     };
-    //     return this.http.post<WorkItemBody>(url, formData, httpOptions);
-    //   }
 
     render() {
         return (
